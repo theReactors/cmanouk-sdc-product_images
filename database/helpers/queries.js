@@ -15,6 +15,3 @@ const insertSingleRow = (urls) => {
           .then((res) => res)
           .catch((err) => err);
 }
-
-// queryRowsById(2).then((res) => console.log(res)).catch((err) => console.error(err))
-// insertSingleRow(['example@example.com', 'url@url.com', 'cmanouk@cmanouk.com']).then((res) => console.log(res)).catch((err) => err);
