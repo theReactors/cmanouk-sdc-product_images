@@ -33,7 +33,7 @@ const reviewsCsvWriter = createCsvWriter({
 
 const writingUsers = () => {
   const userRecords = [];
-  for (let i = 0; i < 500000; i++) {
+  for (let i = 0; i < 1500000; i++) {
     const username = faker.internet.userName();
     if (userRecords[username]) continue;
     userRecords.push({ username });
@@ -52,7 +52,7 @@ const writingListings = () => {
     for (let i = 0; i < imgCount; i++) { urls.push(faker.image.image(320, 240, true)) };
     return `{${urls.slice(1, urls.length - 1)}}`;
   };
-  for (let i = 0; i < 500000; i++) {
+  for (let i = 0; i < 1000000; i++) {
     const title = faker.commerce.productName();
     const product_desc = faker.commerce.productDescription();
     const list_date = randomEpoch();
@@ -69,7 +69,7 @@ const writingListings = () => {
 
 const writingReviews = () => {
   const reviewsRecords = [];
-  for (let i = 0; i < 1000000; i++) {
+  for (let i = 0; i < 2000000; i++) {
     const author = Math.floor(Math.random() * 1500000);
     const listing = Math.floor(Math.random() * 8500000);
     const body = faker.lorem.sentences(2);
@@ -80,6 +80,6 @@ const writingReviews = () => {
     .catch((err) => console.error(err));
 }
 
-writingUsers();
-writingListings();
-writingReviews();
+// writingUsers();
+// writingListings();
+// writingReviews();
