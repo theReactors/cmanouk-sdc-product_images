@@ -52,7 +52,7 @@ const writingListings = () => {
     for (let i = 0; i < imgCount; i++) { urls.push(faker.image.image(320, 240, true)) };
     return `{${urls.slice(1, urls.length - 1)}}`;
   };
-  for (let i = 0; i < 1000000; i++) {
+  for (let i = 0; i < 100; i++) {
     const title = faker.commerce.productName();
     const product_desc = faker.commerce.productDescription();
     const list_date = randomEpoch();
