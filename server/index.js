@@ -26,7 +26,10 @@ app.get('/listing/:id', cache.get, (req, res, next) => {
 app.get('/:userId/listings', (req, res) => {
   const { userId } = req.params;
   db.getUsersListings(userId)
-    .then((result) => res.send(result.rows))
+    .then((result) => {
+      cache.set(req, result.rows)
+      res.send(result.rows)
+    })
     .catch((err) => res.status(400).send(err));
 });
 
