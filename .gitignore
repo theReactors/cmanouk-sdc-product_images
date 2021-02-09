@@ -2,3 +2,5 @@ node_modules
 config.js
 notes.txt
 database/data
+newrelic.js
+newrelic_agent.log
