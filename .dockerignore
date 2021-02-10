@@ -1,7 +1,3 @@
 config.js
-newrelic_agent.log
-newrelic.js
 notes.txt
-database/helpers
-database/data
 node_modules
